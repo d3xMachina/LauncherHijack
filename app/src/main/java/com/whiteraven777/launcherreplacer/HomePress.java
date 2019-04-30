@@ -1,4 +1,4 @@
-package com.baronkiko.launcherhijack;
+package com.whiteraven777.launcherreplacer;
 
 import android.accessibilityservice.AccessibilityService;
 import android.app.PendingIntent;
@@ -19,9 +19,9 @@ public class HomePress {
 
     public static Intent GetDesiredIntent(Context c)
     {
-        SharedPreferences settings = c.getSharedPreferences("LauncherHijack", MODE_PRIVATE);
-        String s = settings.getString("ChosenLauncher", "com.baronkiko.launcherhijack");
-        String name = settings.getString("ChosenLauncherName", "com.baronkiko.launcherhijack.MainActivity");
+        SharedPreferences settings = c.getSharedPreferences("LauncherReplacer", MODE_PRIVATE);
+        String s = settings.getString("ChosenLauncher", "com.whiteraven777.launcherreplacer");
+        String name = settings.getString("ChosenLauncherName", "com.whiteraven777.launcherreplacer.MainActivity");
 
         ComponentName componentName = new ComponentName(s, name);
         Intent i = new Intent(Intent.ACTION_MAIN);

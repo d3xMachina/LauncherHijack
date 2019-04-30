@@ -1,4 +1,4 @@
-package com.baronkiko.launcherhijack;
+package com.whiteraven777.launcherreplacer;
 
 import android.accessibilityservice.AccessibilityService;
 import android.app.UiModeManager;
@@ -98,7 +98,7 @@ public class AccServ extends AccessibilityService {
         });
         homeWatcher.startWatch();
 
-        Log.v(TAG, "Launcher Hijack Service Started on " + DeviceName.getDeviceName());
+        Log.v(TAG, "Launcher Replacer Service Started on " + DeviceName.getDeviceName());
         HomePress.Perform(getApplicationContext());
     }
 

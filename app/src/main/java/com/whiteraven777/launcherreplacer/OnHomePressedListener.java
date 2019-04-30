@@ -1,4 +1,4 @@
-package com.baronkiko.launcherhijack;
+package com.whiteraven777.launcherreplacer;
 
 public interface OnHomePressedListener {
     public void onHomePressed();

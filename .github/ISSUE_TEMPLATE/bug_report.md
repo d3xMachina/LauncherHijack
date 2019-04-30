@@ -19,7 +19,7 @@ Steps to reproduce the behaviour:
 **Expected behaviour**
 A clear and concise description of what you expected to happen.
 
-**Launcher Hijack Version and Device**
+**Launcher Replacer Version and Device**
 Your device and installed version
 
 **Logs**

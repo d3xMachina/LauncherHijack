@@ -1,5 +1,5 @@
-![Logo](AppIcon/TrimmedLogo128.png "Launcher Hijack Logo")
-# LauncherHijack V4
+![Logo](AppIcon/TrimmedLogo128.png "Launcher Replacer Logo")
+# LauncherReplacer V4
 A small Android application to circumvent the default Amazon Fire launcher. Works for Fire Tablets and Fire TV's.  
 Huge thanks to ParrotGeek1, Speeddymon and Urbanman2004.
  - ParrotGeek1 made V1 and without him I would have never started this project.
@@ -11,7 +11,7 @@ I don't really check XDA but you can talk to other users there at the official t
  - [Fire TV's](https://forum.xda-developers.com/fire-tv/general/launcher-root-launcher-hijack-v4-t3877467)
 
 # Important
-Please read the instructions for your device in [HELP.md](https://github.com/BaronKiko/LauncherHijack/blob/master/HELP.md)
+Please read the instructions for your device in [HELP.md](https://github.com/WhiteRaven777/LauncherReplacer/blob/master/HELP.md)
 
 # Bugs
 If you find any issues please leave them in the issue tracker. I will try have a look at them as quickly as possible but there is no guarentee I will be able to fix them.

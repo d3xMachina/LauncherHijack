@@ -1,4 +1,4 @@
-package com.baronkiko.launcherhijack;
+package com.whiteraven777.launcherreplacer;
 
 import android.content.Intent;
 import android.graphics.Color;

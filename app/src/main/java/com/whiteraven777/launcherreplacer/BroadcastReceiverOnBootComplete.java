@@ -1,4 +1,4 @@
-package com.baronkiko.launcherhijack;
+package com.whiteraven777.launcherreplacer;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,14 +16,14 @@ public class BroadcastReceiverOnBootComplete extends BroadcastReceiver {
         switch (intent.getAction())
         {
             case Intent.ACTION_PACKAGE_REMOVED:
-                SharedPreferences settings = context.getSharedPreferences("LauncherHijack", MODE_PRIVATE);
+                SharedPreferences settings = context.getSharedPreferences("LauncherReplacer", MODE_PRIVATE);
                 String s = settings.getString("ChosenLauncher", "");
 
                 if (intent.getData().getSchemeSpecificPart().equals(s))
                 {
                     SharedPreferences.Editor editor = settings.edit();
-                    editor.putString("ChosenLauncher", "com.baronkiko.launcherhijack");
-                    editor.putString("ChosenLauncherName", "com.baronkiko.launcherhijack.MainActivity");
+                    editor.putString("ChosenLauncher", "com.whiteraven777.launcherreplacer");
+                    editor.putString("ChosenLauncherName", "com.whiteraven777.launcherreplacer.MainActivity");
                     editor.commit(); // Commit the edits!
                 }
                 break;

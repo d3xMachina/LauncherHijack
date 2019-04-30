@@ -1,4 +1,4 @@
-package com.baronkiko.launcherhijack;
+package com.whiteraven777.launcherreplacer;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.annotation.TargetApi;
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.donate:
-                Intent donateIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/BaronKiko/LauncherHijack/blob/master/README.md#donations"));
+                Intent donateIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/WhiteRaven777/LauncherReplacer/blob/master/README.md#donations"));
                 startActivity(donateIntent);
                 break;
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity
 
     private void OpenHelp()
     {
-        Intent helpIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/BaronKiko/LauncherHijack/blob/master/HELP.md"));
+        Intent helpIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/WhiteRaven777/LauncherReplacer/blob/master/HELP.md"));
         startActivity(helpIntent);
     }
 
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity
         // set adapter to list view
         mListAppInfo.setAdapter(adapter);
 
-        SharedPreferences settings = getSharedPreferences("LauncherHijack", MODE_PRIVATE);
+        SharedPreferences settings = getSharedPreferences("LauncherReplacer", MODE_PRIVATE);
         String selectedPackage = settings.getString("ChosenLauncher", "com.teslacoilsw.launcher");
 
         for (int i = 0; i < appInfo.size(); i++) {
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity
         String adbCommand1 = "# adb tcpip 5555";
         String adbCommand2 = "# adb connect (yourfiretvip)";
         String adbCommand3 = "# adb shell";
-        String adbCommand4 = "# pm grant com.baronkiko.launcherhijack android.permission.SYSTEM_ALERT";
+        String adbCommand4 = "# pm grant com.whiteraven777.launcherreplacer android.permission.SYSTEM_ALERT";
         String adbCommand4Part2 = "    _WINDOW";
 
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
@@ -229,11 +229,11 @@ public class MainActivity extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
 
-        if (!isAccessibilityEnabled(context, "com.baronkiko.launcherhijack/.AccServ"))
+        if (!isAccessibilityEnabled(context, "com.whiteraven777.launcherreplacer/.AccServ"))
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this)
                     .setTitle("Accessibility Service Disabled")
-                    .setMessage("Accessible Service is disabled. You must enable it to ensure Launcher Hijack's functionality")
+                    .setMessage("Accessible Service is disabled. You must enable it to ensure Launcher Replacer's functionality")
                     .setCancelable(true)
                     .setNegativeButton("Close", new DialogInterface.OnClickListener()
                     {
@@ -266,11 +266,11 @@ public class MainActivity extends AppCompatActivity
             AlertDialog alert = builder.create();
             alert.show();
         }
-        else if (getApplicationContext().getSharedPreferences("LauncherHijack", MODE_PRIVATE).getString("ChosenLauncher", "com.baronkiko.launcherhijack").equals("com.baronkiko.launcherhijack"))
+        else if (getApplicationContext().getSharedPreferences("LauncherReplacer", MODE_PRIVATE).getString("ChosenLauncher", "com.whiteraven777.launcherreplacer").equals("com.whiteraven777.launcherreplacer"))
             Toast.makeText(getApplicationContext(),"Please select a launcher", Toast.LENGTH_LONG).show();
 
 
-        setContentView(com.baronkiko.launcherhijack.R.layout.activity_main);
+        setContentView(com.whiteraven777.launcherreplacer.R.layout.activity_main);
 
         mListAppInfo = findViewById(R.id.lvApps);
 
@@ -294,7 +294,7 @@ public class MainActivity extends AppCompatActivity
 
                                 // We need an Editor object to make preference changes.
                                 // All objects are from android.context.Context
-                                SharedPreferences settings = getSharedPreferences("LauncherHijack", MODE_PRIVATE);
+                                SharedPreferences settings = getSharedPreferences("LauncherReplacer", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = settings.edit();
                                 editor.putString("ChosenLauncher", appInfo.activityInfo.applicationInfo.packageName);
                                 editor.putString("ChosenLauncherName", appInfo.activityInfo.name);
