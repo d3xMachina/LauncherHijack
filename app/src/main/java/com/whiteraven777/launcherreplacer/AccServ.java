@@ -23,6 +23,10 @@ public class AccServ extends AccessibilityService {
     public void onAccessibilityEvent(AccessibilityEvent event) {
         lastApp = (String) event.getPackageName();
         lastClass = (String) event.getClassName();
+        if (lastApp == null)
+            lastApp = "";
+        if (lastClass == null)
+            lastClass = "";
 
         if (!settings.ApplicationOpenDetection)
             return;
