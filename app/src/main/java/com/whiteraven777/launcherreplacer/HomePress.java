@@ -1,12 +1,10 @@
 package com.whiteraven777.launcherreplacer;
 
-import android.accessibilityservice.AccessibilityService;
 import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -42,7 +40,7 @@ public class HomePress {
         LastActivate = time;
 
         Intent i = GetDesiredIntent(c);
-        PendingIntent pendingIntent = PendingIntent.getActivity(c, 0, i, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(c, 0, i, PendingIntent.FLAG_IMMUTABLE);
         try {
             pendingIntent.send();
         } catch (PendingIntent.CanceledException e) {
