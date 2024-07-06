@@ -25,7 +25,8 @@ public class HomeButtonService extends Service {
     public void onCreate() {
         super.onCreate();
 
-        if (SettingsMan.GetSettings().OverlayApplicationDetection)
+        SettingsMan.GetSettings();
+        if (SettingsMan.SettingStore.OverlayApplicationDetection)
         {
             layout = new LinearLayout(getApplicationContext())
             {
@@ -57,7 +58,7 @@ public class HomeButtonService extends Service {
                             | WindowManager.LayoutParams.FLAG_FULLSCREEN
                             | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
                     PixelFormat.TRANSLUCENT);
-            params.gravity = Gravity.LEFT | Gravity.CENTER_VERTICAL;
+            params.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
             wm.addView(layout, params);
         }
     }

@@ -60,4 +60,11 @@
 
         <activity android:name=".SettingsActivity"></activity>
     </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
 </manifest>

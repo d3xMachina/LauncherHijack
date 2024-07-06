@@ -28,7 +28,7 @@ public class Utilities {
 
         if (launchers)
             main.addCategory(Intent.CATEGORY_HOME);
-        List<ResolveInfo> launchables= pm.queryIntentActivities(main, 0);
+        List<ResolveInfo> launchables = pm.queryIntentActivities(main, 0);
 
 
         Collections.sort(launchables, new ResolveInfo.DisplayNameComparator(pm));
